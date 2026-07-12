@@ -114,31 +114,13 @@ Additional punctuation symbols may be defined by future revisions.
 
 ---
 
-## 5.8 Compiler Directives
-
-Compiler directives begin with the `#` character.
-
-Compiler directives influence compilation behavior.
-
-Compiler directives are processed before semantic analysis.
-
-Examples include:
-
-```tyr
-#system async
-
-#target verilog
-```
-
----
-
-## 5.9 Longest Match Rule
+## 5.8 Longest Match Rule
 
 When multiple token interpretations are possible, lexical analysis shall select the longest valid token.
 
 ---
 
-## 5.10 Invalid Tokens
+## 5.9 Invalid Tokens
 
 Character sequences that do not form valid tokens shall produce a lexical diagnostic.
 
