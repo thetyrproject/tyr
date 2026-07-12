@@ -1,0 +1,84 @@
+# 17. Compilation Model
+
+---
+
+## 17.1 Overview
+
+Compilation translates Tyr source code into one or more backend representations.
+
+Compilation shall preserve the observable semantics defined by this specification.
+
+---
+
+## 17.2 Translation Units
+
+Each Tyr source file represents a translation unit.
+
+Compiler directives are processed before lexical analysis.
+
+---
+
+## 17.3 Compilation Stages
+
+A conforming implementation typically performs the following stages.
+
+1. Compiler Directive Processing
+2. Lexical Analysis
+3. Parsing
+4. Semantic Analysis
+5. Elaboration
+6. Hardware Graph Construction
+7. Optimization
+8. Backend Generation
+
+Alternative implementations are permitted provided language semantics remain unchanged.
+
+---
+
+## 17.4 Diagnostics
+
+Compilation diagnostics should identify:
+
+- source location
+- diagnostic severity
+- explanatory message
+
+Additional diagnostic information is implementation-defined.
+
+---
+
+## 17.5 Optimization
+
+Implementations may perform arbitrary optimizations.
+
+Optimizations shall not modify observable hardware behaviour.
+
+---
+
+## 17.6 Elaboration
+
+Elaboration constructs the complete hardware design hierarchy.
+
+Module instantiation occurs during elaboration.
+
+---
+
+## 17.7 Hardware Graph
+
+After semantic analysis, implementations should construct an internal hardware representation.
+
+The structure of this representation is implementation-defined.
+
+---
+
+## 17.8 Output
+
+Implementations may generate:
+
+- Verilog
+- VHDL
+- simulation models
+- synthesis netlists
+- implementation-specific targets
+
+The output format does not alter language semantics.
